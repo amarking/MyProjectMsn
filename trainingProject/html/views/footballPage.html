@@ -1,0 +1,22 @@
+<div ng-repeat="footballInfo in sportsInfo">
+
+    <table  class="table table-bordered">
+        <thead class="title">
+        <tr>
+            <th>Date</th>
+            <th>Time(IST)</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="data in footballInfo.fixture">
+            <td>{{data.date}}</td>
+            <td>{{data.time}}</td>
+            <td>{{data.team1}}</td>
+            <td><img src="{{data.logo1}}"></td>
+            <td>{{data.team2}}</td>
+            <td><img src="{{data.logo2}}"></td>
+        </tr>
+    </table>
+</div>

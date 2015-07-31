@@ -1,0 +1,21 @@
+<!--Angular JS is two way-->
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+<div ng-controller="controller">
+    <h1>{{message}}</h1>
+    <input type="text" ng-model="message">
+</div>
+<script>
+    function controller($scope){
+        $scope.message="Hello World";
+    }
+</script>
+</body>
+</html>

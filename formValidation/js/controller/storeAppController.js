@@ -1,0 +1,88 @@
+/**
+ * Created by ritesing on 7/27/2015.
+ */
+
+storeApp.controller("storeAppController",function($scope){
+    $scope.catagories=
+        [
+        {
+            catName:"Shoes",
+            productList:[
+                {
+                    name:"Shoes1",
+                    image:"../img/shoes1.jpg",
+                    price:"2200"
+                },
+                {
+                    name:"Shoes2",
+                    image:"../img/shoes1.jpg",
+                    price:"1999"
+                },
+                {
+                    name:"Shoes3",
+                    image:"../img/shoes1.jpg",
+                    price:"1235"
+                }
+            ]
+        },
+        {
+            catName:"Shuttle",
+            productList:[
+                {
+                    name:"Shuttle1",
+                    image:"../img/shoes1.jpg",
+                    price:"2800"
+                },
+                {
+                    name:"Shuttle2",
+                    image:"../img/shoes1.jpg",
+                    price:"1999"
+                },
+                {
+                    name:"Shuttle3",
+                    image:"../img/shoes1.jpg",
+                    price:"1335"
+                }
+            ]
+        },
+            {
+                catName:"Ball",
+                productList:[
+                    {
+                        name:"Ball1",
+                        image:"../img/shoes1.jpg",
+                        price:"220"
+                    },
+                    {
+                        name:"Ball2",
+                        image:"../img/shoes1.jpg",
+                        price:"499"
+                    },
+                    {
+                        name:"Ball3",
+                        image:"../img/shoes1.jpg",
+                        price:"335"
+                    }
+                ]
+            }
+
+    ]
+
+    $scope.sortField="price";
+    $scope.sortAscending=function(){
+        $scope.sortField="price";
+    }
+    $scope.sortDescending=function(){
+        $scope.sortField="-price";
+    }
+/*
+
+    $scope.selectCategory=[];
+    $scope.filterByCategory=function(){
+
+    }
+    $scope.addRemoveCategory=function(){
+
+    }
+*/
+})

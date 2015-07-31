@@ -1,0 +1,58 @@
+<div id="productofthemonth">
+    Product of the Month
+    <img src="../img/potm.jpg" />
+
+</div>
+<section id="welcometext">
+    <header>Welcome to Renu's Badminton Store</header>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa felis, tempus a lobortis in, sodales faucibus enim. Nam egestas vulputate maximus. Maecenas vulputate lobortis suscipit. Aliquam ultricies nibh in efficitur efficitur. Sed ut justo auctor, sodales neque eu, tincidunt nunc. Integer sed neque aliquam, rhoncus est vel, tristique elit. Donec felis turpis, blandit at felis eget, porta pretium tellus. Maecenas hendrerit blandit mauris in blandit. Ut interdum non arcu et tempor. Aliquam varius tellus tellus, sed rutrum libero pulvinar a. Morbi a est in ex posuere vehicula. Etiam dignissim tortor sed magna feugiat, vitae blandit libero auctor.
+            <p><mark>Note that our store is closed during Ganesh Festival</mark></p>
+        </span>
+</section>
+<aside id="events">
+    <header>Here's what happening</header>
+    <ul>
+        <li><a href="#">New Rackets added</a> </li>
+        <li><a href="#">Store decorated</a> </li>
+        <li><a href="#">New website launched</a> </li>
+    </ul>
+</aside>
+<section ng-controller="storeAppController" id="bestsellers">
+    <header>Best Sellers @ Renu's Badminton Store</header>
+    <!--
+            <select ng-model="query.catName" class="input-medium">
+                <option  selected value="">All</option>
+                <option ng-repeat="catagory in catagories" value="{{catagory.catName}}">{{catagory.catName}}</option>
+            </select>
+    -->
+       <span>
+           <input type="checkbox" ng-repeat="catagory in catagories" ng-click="addRemoveCategory(catagory.catName)">
+       </span>
+
+    <section ng-repeat="catagory in catagories | filter:filterByCategory" class="badmintonbestsellers">
+
+        <header  class="backgroundgradient">
+            {{catagory.catName | uppercase}}
+            <span class="sortButton" ng-click="sortAscending()" style="float:right">&#9650;</span>
+            <span class="sortButton" ng-click="sortDescending()" style="float:right">&#9660;</span>
+        </header>
+
+
+        <article ng-repeat="product in catagory.productList | orderBy:sortField" class="productarticle">
+            <figure>
+                <img class="productarticlethumbnail"  src="{{product.image}}"/>
+            </figure>
+            <header>
+                    <span class="productarticlename">
+                        <a href="shoedetails.html">{{product.name}}</a>
+                    </span>
+            </header>
+            <p class="productarticleprice">{{product.price | currency:"&#8377;"}}</p>
+            <div class="addtocartbutton">
+                Add to Cart
+            </div>
+        </article>
+
+    </section>
+</section>

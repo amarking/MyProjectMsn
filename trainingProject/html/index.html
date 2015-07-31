@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="sportsApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sports update</title>
+    <link rel="stylesheet" href="../css/Layout.css">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../lib/angular-1.4.3/angular.min.js"></script>
+    <script src="../../lib/angular-1.4.3/angular-resource.js"></script>
+    <script src="../../lib/angular-1.4.3/angular-route.js"></script>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/services/appService.js"></script>
+    <script src="../js/controllers/appController.js"></script>
+
+</head>
+<body>
+<header>
+    <div>
+        <a class="headerlogo" href="index.html">
+            <img src="../img/msn.jpg"/>
+        </a>
+        <span id="headername">Sports</span>
+        <input type="search" class="searchbox" placeholder="Search our store" />
+    </div>
+    <nav class="backgroundgradient">
+        <ul>
+            <!-- <li><a class="navlink" href="#/">Home</a></li>-->
+            <li><a class="navlink" href="#/Tennis">Tennis</a></li>
+            <li><a class="navlink" href="#/Football">Football</a></li>
+        </ul>
+    </nav>
+</header>
+<ng-view></ng-view>
+<footer>
+    <p class="smalltext">@ 2015 Microsoft<time>09:35:04.123</time></p>
+</footer>
+</body>
+</html>

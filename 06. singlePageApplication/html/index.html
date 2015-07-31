@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="storeApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/Layout.css">
+    <script src="../../lib/angular-1.4.3/angular.min.js"></script>
+    <script src="../../lib/angular-1.4.3/angular-resource.js"></script>
+    <script src="../../lib/angular-1.4.3/angular-route.js"></script>
+
+    <script src="../js/storeAppModule.js"></script>
+    <script src="../js/service/storeAppService.js"></script>
+    <script src="../js/controller/storeAppController.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="headerlogo" href="index.html">
+                <img src="../img/logo.png"/>
+            </a>
+            <span id="headername">Renu's Badminton Store</span>
+            <input type="search" class="searchbox" placeholder="Search our store" />
+        </div>
+        <nav class="backgroundgradient">
+            <ul>
+                <li><a class="navlink" href="#/home">Home</a></li>
+                <li><a class="navlink" href="#">Blog</a></li>
+                <li><a class="navlink" href="#">Our Products</a></li>
+                <li><a class="navlink" href="#">Accessories</a></li>
+                <li><a class="navlink" href="#">Find us</a></li>
+                <li><a class="navlink" href="#/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+        <div id="welcomeimage">
+            <img src="../img/badmintonheader.JPG" />
+        </div>
+    </header>
+
+<ng-view>
+
+</ng-view>
+    <footer>
+        <p>Our Address</p><address>D-10 Tilak Road , Pune</address>
+        <p class="textcontent">All site contents is copyright <a class="mainlink" href="#">Renu's Badminton Store</a></p>
+        <p class="smalltext">This page was generated on <time>09:35:04.123</time></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+[
+    {
+        "sports":"Football",
+        "fixture":[
+            {
+                "date":"22 August",
+                "time":"00",
+                "team1":"Malaga",
+                "logo1":"../img/logo1.png",
+                "team2":"sevilla",
+                "logo2":"../img/logo2.png"
+            },
+            {
+                "date":"22 August",
+                "time":"22:00",
+                "team1":"Deportivo de La Coruña",
+                "logo1":"../img/logo1.png",
+                "team2":"Real Sociedad",
+                "logo2":"../img/logo2.png"
+            },
+            {
+                "date":"23 August",
+                "time":"00",
+                "team1":"Rayo Vallecano",
+                "logo1":"../img/logo1.png",
+                "team2":"sevilla",
+                "logo2":"../img/logo2.png"
+            },
+            {
+                "date":"23 August",
+                "time":"02:00",
+                "team1":"Deportivo de La Coruña",
+                "logo1":"../img/logo1.png",
+                "team2":"Real Sociedad",
+                "logo2":"../img/logo2.png"
+            }
+        ]
+    },
+    {
+        "sports":"Tennis",
+        "fixture":[
+            {
+                "date":"30 Jul",
+                "time":"15:00",
+                "team1":"Pablo Cuevas (5)",
+                "team2":"Jerzy Janowicz"
+            },
+            {
+                "date":"30 Jul",
+                "time":"15:30",
+                "team1":"Andreas Seppi (4)",
+                "team2":"Florian Mayer"
+            },
+            {
+                "date":"30 Jul",
+                "time":"17:00",
+                "team1":"Rafael Nadal (1)",
+                "team2":"Jiri Vesely"
+            },
+            {
+                "date":"30 Jul",
+                "time":"17:30",
+                "team1":"Simone Bolelli",
+                "team2":"Jaume Munar"
+            }
+
+        ]
+    }
+]

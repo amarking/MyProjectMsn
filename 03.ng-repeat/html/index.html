@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="storeApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/Layout.css">
+    <script src="../../lib/angular-1.4.3/angular.min.js"></script>
+    <script src="../js/storeAppModule.js"></script>
+    <script src="../js/controller/storeAppController.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="headerlogo" href="index.html">
+                <img src="../img/logo.png"/>
+            </a>
+            <span id="headername">Renu's Badminton Store</span>
+            <input type="search" class="searchbox" placeholder="Search our store" />
+        </div>
+
+
+        <div id="welcomeimage">
+            <img src="../img/badmintonheader.JPG" />
+        </div>
+
+    </header>
+    <section id="welcometext">
+        <header>Welcome to Renu's Badminton Store</header>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa felis, tempus a lobortis in, sodales faucibus enim. Nam egestas vulputate maximus. Maecenas vulputate lobortis suscipit. Aliquam ultricies nibh in efficitur efficitur. Sed ut justo auctor, sodales neque eu, tincidunt nunc. Integer sed neque aliquam, rhoncus est vel, tristique elit. Donec felis turpis, blandit at felis eget, porta pretium tellus. Maecenas hendrerit blandit mauris in blandit. Ut interdum non arcu et tempor. Aliquam varius tellus tellus, sed rutrum libero pulvinar a. Morbi a est in ex posuere vehicula. Etiam dignissim tortor sed magna feugiat, vitae blandit libero auctor.
+            <p><mark>Note that our store is closed during Ganesh Festival</mark></p>
+        </span>
+    </section>
+    <aside id="events">
+        <header>Here's what happening</header>
+        <ul>
+            <li><a href="#">New Rackets added</a> </li>
+            <li><a href="#">Store decorated</a> </li>
+            <li><a href="#">New website launched</a> </li>
+        </ul>
+    </aside>
+    <section ng-controller="storeAppController" id="bestsellers">
+        <header>Best Sellers @ Renu's Badminton Store</header>
+
+        <select ng-model="query.catName" class="input-medium">
+            <option  selected value="">All</option>
+            <option ng-repeat="catagory in catagories" value="{{catagory.catName}}">{{catagory.catName}}</option>
+        </select>
+<!--
+       <span  ng-repeat="catagory in catagories">
+           <input type="checkbox" checked ng-click="addRemoveCategory(catagory.catName)">{{catagory.catName}}
+       </span>
+-->
+        <section ng-repeat="catagory in catagories | filter:query" class="badmintonbestsellers">
+
+            <header  class="backgroundgradient">
+               {{catagory.catName | uppercase}}
+                <span class="sortButton" ng-click="sortAscending()" style="float:right">&#9650;</span>
+                <span class="sortButton" ng-click="sortDescending()" style="float:right">&#9660;</span>
+            </header>
+
+
+            <article ng-repeat="product in catagory.productList | orderBy:sortField" class="productarticle">
+                <figure>
+                    <img class="productarticlethumbnail"  src="{{product.image}}"/>
+                </figure>
+                <header>
+                    <span class="productarticlename">
+                        <a href="shoedetails.html">{{product.name}}</a>
+                    </span>
+                </header>
+                <p class="productarticleprice">{{product.price | currency:"&#8377;"}}</p>
+                <div class="addtocartbutton">
+                    Add to Cart
+                </div>
+            </article>
+
+        </section>
+    </section>
+    <footer>
+        <p>Our Address</p><address>D-10 Tilak Road , Pune</address>
+        <p class="textcontent">All site contents is copyright <a class="mainlink" href="#">Renu's Badminton Store</a></p>
+        <p class="smalltext">This page was generated on <time>09:35:04.123</time></p>
+    </footer>
+</body>
+</html>
